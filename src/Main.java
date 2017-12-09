@@ -2,12 +2,12 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int[] s = new int[]{0,1,1,0,0,0,1,1,1,1,0,0};
-        int osn = 2; //основание СС для последовательности s
+        int[] s = new int[]{0,1,1,0,0,0,1,1,1,1,0,0}; //input sequence
+        int osn = 2; //order of finite field
         Map.Entry<int[],Integer> res = bmalgo(s, osn);
         int L = res.getValue();
         int[] LFSR = res.getKey();
-        int k = 10;
+        int k = 10; //count of symbols to generate
         printNextSeq(s,osn,L,LFSR,k);
     }
 
